@@ -1,4 +1,5 @@
 import { Quote, Star } from "lucide-react";
+import latinoSatisfactionImg from "@/assets/latino-satisfaction.jpg";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -33,47 +34,65 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.author}
-              className="relative bg-background rounded-2xl p-8 shadow-lg border border-border hover:border-gold/50 transition-all duration-300 hover:-translate-y-2"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Quote Icon */}
-              <div className="absolute -top-4 left-8">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center shadow-lg">
-                  <Quote className="w-5 h-5 text-primary" />
-                </div>
-              </div>
-
-              {/* Stars */}
-              <div className="flex gap-1 mb-4 pt-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-gold text-gold" />
-                ))}
-              </div>
-
-              {/* Quote */}
-              <p className="text-foreground/80 mb-6 leading-relaxed italic">
-                "{testimonial.quote}"
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-border">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-navy-light flex items-center justify-center">
-                  <span className="font-serif font-bold text-primary-foreground text-lg">
-                    {testimonial.author[0]}
-                  </span>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </div>
+        {/* Content Grid - Image + Testimonials */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Satisfaction Image */}
+          <div className="relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={latinoSatisfactionImg}
+                alt="Satisfied Latino family celebrating financial success"
+                className="w-full h-auto object-cover aspect-[4/4]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent" />
             </div>
-          ))}
+            {/* Decorative elements */}
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-gold to-gold-light rounded-2xl -z-10" />
+            <div className="absolute -top-4 -right-4 w-16 h-16 border-4 border-gold rounded-xl -z-10" />
+          </div>
+
+          {/* Testimonials */}
+          <div className="space-y-6">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={testimonial.author}
+                className="relative bg-background rounded-2xl p-6 shadow-lg border border-border hover:border-gold/50 transition-all duration-300 hover:-translate-y-1"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Quote Icon */}
+                <div className="absolute -top-3 left-6">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center shadow-lg">
+                    <Quote className="w-4 h-4 text-primary" />
+                  </div>
+                </div>
+
+                {/* Stars */}
+                <div className="flex gap-1 mb-3 pt-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 fill-gold text-gold" />
+                  ))}
+                </div>
+
+                {/* Quote */}
+                <p className="text-foreground/80 mb-4 leading-relaxed italic text-sm">
+                  "{testimonial.quote}"
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center gap-3 pt-3 border-t border-border">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-navy-light flex items-center justify-center">
+                    <span className="font-serif font-bold text-primary-foreground">
+                      {testimonial.author[0]}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">{testimonial.author}</p>
+                    <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
