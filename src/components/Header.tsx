@@ -46,8 +46,8 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">510-520-2707</span>
             </a>
-            <Button variant="gold" size="default">
-              Book Now
+            <Button variant="gold" size="default" asChild>
+              <a href="https://www.netassets.llc/en/booking-calendar/business-consulting" target="_blank" rel="noopener noreferrer">Book Now</a>
             </Button>
           </div>
 
@@ -75,8 +75,8 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="gold" size="lg" className="mt-4">
-                Book Now
+              <Button variant="gold" size="lg" className="mt-4" asChild>
+                <a href="https://www.netassets.llc/en/booking-calendar/business-consulting" target="_blank" rel="noopener noreferrer">Book Now</a>
               </Button>
             </nav>
           </div>
