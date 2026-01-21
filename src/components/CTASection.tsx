@@ -37,35 +37,35 @@ const CTASection = () => {
             <h3 className="font-serif text-2xl font-bold text-foreground mb-6">Contact Information</h3>
             
             <div className="space-y-6">
-              <a href="tel:+1234567890" className="flex items-start gap-4 group">
+              <a href="tel:+15105202707" className="flex items-start gap-4 group">
                 <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                   <Phone className="w-6 h-6 text-gold" />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Phone</p>
-                  <p className="text-muted-foreground">(123) 456-7890</p>
+                  <p className="text-muted-foreground">510-520-2707</p>
                 </div>
               </a>
 
-              <a href="mailto:info@netassets.llc" className="flex items-start gap-4 group">
+              <a href="mailto:info@netassets.tax" className="flex items-start gap-4 group">
                 <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                   <Mail className="w-6 h-6 text-gold" />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Email</p>
-                  <p className="text-muted-foreground">info@netassets.llc</p>
+                  <p className="text-muted-foreground">info@netassets.tax</p>
                 </div>
               </a>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center shrink-0">
+              <a href="https://maps.google.com/?q=200+Gregory+Ln+Ste+B-201+Pleasant+Hill+CA+94523" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
+                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                   <MapPin className="w-6 h-6 text-gold" />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Location</p>
-                  <p className="text-muted-foreground">123 Business Ave, Suite 100<br />Houston, TX 77001</p>
+                  <p className="text-muted-foreground">200 Gregory Ln Ste B-201<br />Pleasant Hill, CA 94523, USA</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
