@@ -22,9 +22,9 @@ const TaxProfessionalSection = () => {
           {/* Photo */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={lenningImg}
-                alt="Lenning - Tax Professional"
+                <img
+                  src={lenningImg}
+                  alt="Lening Matute - Tax Professional"
                 className="w-full h-auto object-cover aspect-[4/5]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
@@ -37,7 +37,7 @@ const TaxProfessionalSection = () => {
           {/* Bio Content */}
           <div>
             <h3 className="font-serif text-3xl font-bold text-foreground mb-4">
-              Lenning
+              Lening Matute
             </h3>
             <p className="text-gold font-semibold text-lg mb-6">
               Founder & Lead Tax Professional
@@ -45,7 +45,7 @@ const TaxProfessionalSection = () => {
 
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
               <p>
-                After migrating from El Salvador in pursuit of opportunity, Lenning quickly 
+                After migrating from El Salvador in pursuit of opportunity, Lening quickly 
                 recognized the unique challenges faced by Americans and, in particular, Latino 
                 immigrants navigating the complexities of the U.S. financial system.
               </p>
@@ -55,7 +55,7 @@ const TaxProfessionalSection = () => {
                 and real-world understanding to every client interaction.
               </p>
               <p>
-                Lenning lives by strict personal, religious, and core values that shape his unique 
+                Lening lives by strict personal, religious, and core values that shape his unique 
                 character and approach to delivering solutions and services. His passion for helping 
                 his community drives everything he does at Net Assets & Associates.
               </p>
