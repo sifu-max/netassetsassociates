@@ -22,9 +22,11 @@ const CTASection = () => {
               you achieve your financial goals.
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button variant="gold" size="xl">
-                Book Consultation
-                <ArrowRight className="w-5 h-5" />
+              <Button variant="gold" size="xl" asChild>
+                <a href="https://www.netassets.llc/en/booking-calendar/business-consulting" target="_blank" rel="noopener noreferrer">
+                  Book Consultation
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </Button>
               <Button variant="outline" size="xl">
                 Call Us Now
