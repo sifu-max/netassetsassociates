@@ -28,8 +28,8 @@ const CTASection = () => {
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="xl">
-                Call Us Now
+              <Button variant="outline" size="xl" asChild>
+                <a href="tel:+15105202707">Call Us Now</a>
               </Button>
             </div>
           </div>
