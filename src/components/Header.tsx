@@ -50,9 +50,9 @@ const Header = () => {
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/30 hover:border-gold/60 transition-colors text-primary-foreground/80 hover:text-gold text-sm font-medium"
               aria-label="Toggle language"
             >
-              <span className={language === "en" ? "text-gold font-bold" : ""}>EN</span>
-              <span className="text-primary-foreground/40">|</span>
               <span className={language === "es" ? "text-gold font-bold" : ""}>ES</span>
+              <span className="text-primary-foreground/40">|</span>
+              <span className={language === "en" ? "text-gold font-bold" : ""}>EN</span>
             </button>
 
             <a href="tel:+15105202707" className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors">
