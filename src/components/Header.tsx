@@ -2,16 +2,18 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#services", label: "Services" },
-    { href: "#about", label: "About" },
-    { href: "#testimonials", label: "Testimonials" },
-    { href: "#contact", label: "Contact" },
+    { href: "#home", label: t.nav.home },
+    { href: "#services", label: t.nav.services },
+    { href: "#about", label: t.nav.about },
+    { href: "#testimonials", label: t.nav.testimonials },
+    { href: "#contact", label: t.nav.contact },
   ];
 
   return (
@@ -40,14 +42,25 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons + Language Toggle */}
           <div className="hidden md:flex items-center gap-4">
+            {/* Language Toggle */}
+            <button
+              onClick={() => setLanguage(language === "en" ? "es" : "en")}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/30 hover:border-gold/60 transition-colors text-primary-foreground/80 hover:text-gold text-sm font-medium"
+              aria-label="Toggle language"
+            >
+              <span className={language === "en" ? "text-gold font-bold" : ""}>EN</span>
+              <span className="text-primary-foreground/40">|</span>
+              <span className={language === "es" ? "text-gold font-bold" : ""}>ES</span>
+            </button>
+
             <a href="tel:+15105202707" className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors">
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">510-520-2707</span>
             </a>
             <Button variant="gold" size="default" asChild>
-              <a href="https://www.netassets.llc/en/booking-calendar/business-consulting" target="_blank" rel="noopener noreferrer">Book Now</a>
+              <a href="https://www.netassets.llc/en/booking-calendar/business-consulting" target="_blank" rel="noopener noreferrer">{t.nav.bookNow}</a>
             </Button>
           </div>
 
@@ -75,8 +88,15 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
+              {/* Mobile Language Toggle */}
+              <button
+                onClick={() => setLanguage(language === "en" ? "es" : "en")}
+                className="flex items-center gap-2 text-primary-foreground/80 hover:text-gold transition-colors font-medium py-2"
+              >
+                {language === "en" ? "🇪🇸 Español" : "🇺🇸 English"}
+              </button>
               <Button variant="gold" size="lg" className="mt-4" asChild>
-                <a href="https://www.netassets.llc/en/booking-calendar/business-consulting" target="_blank" rel="noopener noreferrer">Book Now</a>
+                <a href="https://www.netassets.llc/en/booking-calendar/business-consulting" target="_blank" rel="noopener noreferrer">{t.nav.bookNow}</a>
               </Button>
             </nav>
           </div>
