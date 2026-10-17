@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Briefcase, Calculator, User, ArrowRight } from "lucide-react";
+import { Briefcase, Calculator, User, Banknote, ArrowRight, Phone } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { bookingUrl, serviceOrder } from "@/lib/booking";
 
@@ -22,7 +22,7 @@ const ServicesSection = () => {
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">{t.services.subtitle}</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
           {t.services.items.map((service, index) => {
             const Icon = icons[index];
             return (
@@ -46,6 +46,19 @@ const ServicesSection = () => {
               </div>
             );
           })}
+          <div className="group relative bg-navy-light/50 backdrop-blur-sm rounded-2xl p-8 border border-gold/20 hover:border-gold/50 transition-all duration-300 hover:-translate-y-2">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Banknote className="w-8 h-8 text-primary" />
+            </div>
+            <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4">{t.payroll.cardTitle}</h3>
+            <p className="text-primary-foreground/70 mb-6 leading-relaxed">{t.payroll.cardDescription}</p>
+            <Button variant="hero-outline" size="default" className="group/btn" asChild>
+              <a href="#payroll">
+                {t.payroll.call}
+                <Phone className="w-4 h-4" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

@@ -60,6 +60,17 @@ export const translations = {
       ],
       bookNow: "Book Now",
     },
+    payroll: {
+      label: "Small business payroll",
+      cardTitle: "Payroll for Small Businesses",
+      cardDescription: "Payroll help for small businesses, including owners who have an ITIN or still need one. Call or email and ask which setup fits. Employees are a separate case.",
+      heading: "Payroll for small businesses",
+      owner: "If you own the business and you file with an ITIN, or you still need an ITIN, we can talk through bookkeeping, payroll tax registration, and help running payroll for the company.",
+      employees: "Employees are separate. Payroll services generally need a Social Security number for each employee. An ITIN does not replace a Social Security number for an employee, and we do not promise to put a worker who has only an ITIN on payroll.",
+      ask: "Call or email. Say whether you are the owner or you are asking about employees.",
+      call: "Call 510-520-2707",
+      email: "Email info@netassets.tax",
+    },
     // About
     about: {
       label: "About Us",
@@ -145,7 +156,7 @@ export const translations = {
       quickLinks: "Quick Links",
       services: "Services",
       followUs: "Follow Us",
-      servicesList: ["Business Consultancy", "Small Business Taxes", "Personal Taxes", "ITIN Applications"],
+      servicesList: ["Business Consultancy", "Small Business Taxes", "Personal Taxes", "ITIN Applications", "Payroll for Small Businesses"],
       copyright: "Net Assets & Associates LLC. All rights reserved.",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
@@ -211,6 +222,17 @@ export const translations = {
         { title: "Impuestos Personales", description: "Preparación de impuestos personalizada para individuos con orientación y apoyo precisos." },
       ],
       bookNow: "Reservar",
+    },
+    payroll: {
+      label: "Nómina para pequeñas empresas",
+      cardTitle: "Nómina para pequeñas empresas",
+      cardDescription: "Ayuda con la nómina para pequeñas empresas, incluso si el dueño tiene un ITIN o todavía lo necesita. Llame o escriba y pregunte qué configuración corresponde. Los empleados son un caso aparte.",
+      heading: "Nómina para pequeñas empresas",
+      owner: "Si usted es el dueño y declara con un ITIN, o todavía necesita un ITIN, podemos hablar de la contabilidad, el registro de impuestos de nómina y la ayuda para correr la nómina del negocio.",
+      employees: "Los empleados son otro caso. Los servicios de nómina por lo general necesitan un número de Seguro Social para cada empleado. Un ITIN no sustituye el Seguro Social de un empleado, y no prometemos poner en nómina a quien solo tiene un ITIN.",
+      ask: "Llame o escriba. Diga si usted es el dueño o si pregunta por empleados.",
+      call: "Llamar al 510-520-2707",
+      email: "Escribir a info@netassets.tax",
     },
     // About
     about: {
@@ -297,7 +319,7 @@ export const translations = {
       quickLinks: "Enlaces Rápidos",
       services: "Servicios",
       followUs: "Síguenos",
-      servicesList: ["Consultoría Empresarial", "Impuestos para Pequeñas Empresas", "Impuestos Personales", "Solicitudes de ITIN"],
+      servicesList: ["Consultoría Empresarial", "Impuestos para Pequeñas Empresas", "Impuestos Personales", "Solicitudes de ITIN", "Nómina para pequeñas empresas"],
       copyright: "Net Assets & Associates LLC. Todos los derechos reservados.",
       privacy: "Política de Privacidad",
       terms: "Términos de Servicio",
