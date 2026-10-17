@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import heroProfessionals from "@/assets/hero-professionals.jpg";
 import { useLanguage } from "@/context/LanguageContext";
+import { bookingUrl } from "@/lib/booking";
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return <section id="home" className="relative min-h-screen flex">
       {/* Left Side - Image */}
@@ -39,12 +40,14 @@ const HeroSection = () => {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Button variant="hero" size="xl">
-              {t.hero.bookConsultation}
-              <ArrowRight className="w-5 h-5" />
+            <Button variant="hero" size="xl" asChild>
+              <a href={bookingUrl("consulting", language)} target="_blank" rel="noopener noreferrer">
+                {t.hero.bookConsultation}
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </Button>
-            <Button variant="hero-outline" size="xl">
-              {t.hero.learnMore}
+            <Button variant="hero-outline" size="xl" asChild>
+              <a href="#itin">{t.hero.learnMore}</a>
             </Button>
           </div>
         </div>

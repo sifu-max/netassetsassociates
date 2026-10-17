@@ -18,9 +18,11 @@ const AboutSection = () => {
               <strong className="text-foreground">NET ASSETS & ASSOCIATES LLC</strong> {t.about.p1}
             </p>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">{t.about.p2}</p>
-            <Button variant="gold" size="lg">
-              {t.about.learnMore}
-              <ArrowRight className="w-5 h-5" />
+            <Button variant="gold" size="lg" asChild>
+              <a href="#professional">
+                {t.about.learnMore}
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </Button>
           </div>
 

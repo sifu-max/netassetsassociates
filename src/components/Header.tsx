@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { useLanguage } from "@/context/LanguageContext";
+import { bookingUrl } from "@/lib/booking";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,7 +61,7 @@ const Header = () => {
               <span className="text-sm font-medium">510-520-2707</span>
             </a>
             <Button variant="gold" size="default" asChild>
-              <a href="https://www.netassets.llc/en/booking-calendar/business-consulting" target="_blank" rel="noopener noreferrer">{t.nav.bookNow}</a>
+              <a href={bookingUrl("consulting", language)} target="_blank" rel="noopener noreferrer">{t.nav.bookNow}</a>
             </Button>
           </div>
 
@@ -96,7 +97,7 @@ const Header = () => {
                 {language === "en" ? "🇪🇸 Español" : "🇺🇸 English"}
               </button>
               <Button variant="gold" size="lg" className="mt-4" asChild>
-                <a href="https://www.netassets.llc/en/booking-calendar/business-consulting" target="_blank" rel="noopener noreferrer">{t.nav.bookNow}</a>
+                <a href={bookingUrl("consulting", language)} target="_blank" rel="noopener noreferrer">{t.nav.bookNow}</a>
               </Button>
             </nav>
           </div>

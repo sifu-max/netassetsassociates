@@ -18,7 +18,7 @@ const TaxProfessionalSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img src={lenningImg} alt="Lening Matute - Tax Professional" className="w-full h-auto object-cover aspect-[4/5]" />
+              <img src={lenningImg} alt="Lening A. Nuñez Matute, tax preparer" className="w-full h-auto object-cover aspect-[4/5]" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-gold to-gold-light rounded-2xl -z-10" />
@@ -31,9 +31,7 @@ const TaxProfessionalSection = () => {
 
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
               <p>{t.taxPro.bio1}</p>
-              <p>
-                With a <strong className="text-foreground">{t.taxPro.bio2strong}</strong>{t.taxPro.bio2}
-              </p>
+              <p>{t.taxPro.bio2}</p>
               <p>{t.taxPro.bio3}</p>
             </div>
 

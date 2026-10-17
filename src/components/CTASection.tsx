@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Phone, Mail, MapPin, Printer, Clock } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { bookingUrl } from "@/lib/booking";
 
 const CTASection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <section id="contact" className="section-padding bg-secondary relative overflow-hidden">
@@ -21,7 +22,7 @@ const CTASection = () => {
             <p className="text-muted-foreground text-lg mb-8 max-w-xl">{t.cta.description}</p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Button variant="gold" size="xl" asChild>
-                <a href="https://www.netassets.llc/en/booking-calendar/business-consulting" target="_blank" rel="noopener noreferrer">
+                <a href={bookingUrl("consulting", language)} target="_blank" rel="noopener noreferrer">
                   {t.cta.bookConsultation}
                   <ArrowRight className="w-5 h-5" />
                 </a>
@@ -62,6 +63,24 @@ const CTASection = () => {
                   <p className="text-muted-foreground">200 Gregory Ln Ste B-201<br />Pleasant Hill, CA 94523, USA</p>
                 </div>
               </a>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center shrink-0">
+                  <Printer className="w-6 h-6 text-gold" />
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">{t.cta.faxLabel}</p>
+                  <p className="text-muted-foreground">{t.cta.fax}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center shrink-0">
+                  <Clock className="w-6 h-6 text-gold" />
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">{t.cta.hoursLabel}</p>
+                  <p className="text-muted-foreground">{t.cta.hours}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

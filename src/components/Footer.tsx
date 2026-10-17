@@ -1,4 +1,3 @@
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Footer = () => {
@@ -13,17 +12,10 @@ const Footer = () => {
     { href: "#contact", label: t.nav.contact },
   ];
 
-  const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-  ];
-
   return (
     <footer className="bg-primary pt-16 pb-8">
       <div className="container-width">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gold to-gold-light flex items-center justify-center">
@@ -60,23 +52,14 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg font-semibold text-primary-foreground mb-4">{t.footer.followUs}</h4>
-            <div className="flex gap-3">
-              {socialLinks.map((social) => (
-                <a key={social.label} href={social.href} aria-label={social.label} className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center hover:bg-gold/20 transition-colors group">
-                  <social.icon className="w-5 h-5 text-gold group-hover:scale-110 transition-transform" />
-                </a>
-              ))}
-            </div>
+            <h4 className="font-serif text-lg font-semibold text-primary-foreground mb-4">{t.cta.hoursLabel}</h4>
+            <p className="text-primary-foreground/70 text-sm leading-relaxed">{t.cta.hours}</p>
+            <p className="text-primary-foreground/70 text-sm mt-3">{t.cta.faxLabel}: {t.cta.fax}</p>
           </div>
         </div>
 
-        <div className="border-t border-gold/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-gold/20 pt-8">
           <p className="text-primary-foreground/50 text-sm">© {currentYear} {t.footer.copyright}</p>
-          <div className="flex gap-6">
-            <a href="#" className="text-primary-foreground/50 hover:text-gold text-sm transition-colors">{t.footer.privacy}</a>
-            <a href="#" className="text-primary-foreground/50 hover:text-gold text-sm transition-colors">{t.footer.terms}</a>
-          </div>
         </div>
       </div>
     </footer>

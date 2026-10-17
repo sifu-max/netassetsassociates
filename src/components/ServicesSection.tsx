@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Briefcase, Calculator, User, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { bookingUrl, serviceOrder } from "@/lib/booking";
 
 const icons = [Briefcase, Calculator, User];
 
 const ServicesSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <section id="services" className="section-padding bg-primary relative overflow-hidden">
@@ -35,9 +36,11 @@ const ServicesSection = () => {
                 </div>
                 <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4">{service.title}</h3>
                 <p className="text-primary-foreground/70 mb-6 leading-relaxed">{service.description}</p>
-                <Button variant="hero-outline" size="default" className="group/btn">
-                  {t.services.bookNow}
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                <Button variant="hero-outline" size="default" className="group/btn" asChild>
+                  <a href={bookingUrl(serviceOrder[index], language)} target="_blank" rel="noopener noreferrer">
+                    {t.services.bookNow}
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>

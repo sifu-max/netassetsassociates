@@ -2,26 +2,9 @@ import { Quote, Star } from "lucide-react";
 import latinoSatisfactionImg from "@/assets/latino-satisfaction.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
-const testimonials = [
-  {
-    quote: "The best experience, very well explained, it is my first time doing the taxes and Lenin explained every detail to me. Thank you for your attention and patience in explaining. I hope GOD blesses you greatly. Thank you very much.",
-    author: "Ashly Zelaya",
-    role: "Personal Tax Client",
-  },
-  {
-    quote: "My family had an amazing experience with Net Assets & Assoc! The customer service was top-notch, and the tax services, knowledge and expertise exceeded our expectations. I highly recommend Lenin and his team to anyone looking for a trustworthy, reliable tax preparer.",
-    author: "John Rodriguez",
-    role: "Small Business Owner",
-  },
-  {
-    quote: "NET ASSETS & ASSOCIATES truly understands the needs of the Hispanic community. Their dedication to serving us has made them a trusted partner for all of our financial needs.",
-    author: "Raul Solis",
-    role: "Business Consultant Client",
-  },
-];
-
 const TestimonialsSection = () => {
   const { t } = useLanguage();
+  const testimonials = t.testimonials.items;
 
   return (
     <section id="testimonials" className="section-padding bg-secondary">
