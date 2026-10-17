@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Lock, FileText, CheckCircle2, Phone, Mail } from "lucide-react";
+import { Lock, FileText, CheckCircle2, Phone, Mail, Globe } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const ADMIN_PASSWORD = "netassets2026";
@@ -309,13 +309,21 @@ const Admin = () => {
 
           {/* Contact */}
           <section className="bg-primary rounded-xl p-6 text-center">
-            <p className="text-primary-foreground/80 text-sm mb-3">Questions about this proposal?</p>
+            <p className="text-primary-foreground/80 text-sm mb-3">Questions about this proposal? Contact CRM Chains:</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="tel:+15105202707" className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors font-medium">
-                <Phone className="w-4 h-4" /> 510-520-2707
+              <a
+                href="https://www.crmchains.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors font-medium"
+              >
+                <Globe className="w-4 h-4" /> www.crmchains.com
               </a>
-              <a href="mailto:info@netassets.tax" className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors font-medium">
-                <Mail className="w-4 h-4" /> info@netassets.tax
+              <a href="tel:+12183925043" className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors font-medium">
+                <Phone className="w-4 h-4" /> +1 (218) 392-5043
+              </a>
+              <a href="mailto:sifu@medalloinnovations.ai" className="flex items-center gap-2 text-gold hover:text-gold-light transition-colors font-medium">
+                <Mail className="w-4 h-4" /> sifu@medalloinnovations.ai
               </a>
             </div>
           </section>
